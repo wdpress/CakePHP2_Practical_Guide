@@ -1,0 +1,15 @@
+<?php
+// app/Controller/FriendsController.php
+class FriendsController extends AppController {
+    public function index() {
+        $data = array(
+            'Friend' => array(
+                'first_name' => 'Duke',
+                'last_name' =>'滝下'
+            )
+        );
+        $this->Friend->save($data);
+        debug($this->Friend->id); // 登録したデータのIDが取得できる
+        debug($this->Friend->getLastInsertID()); // 上記と同じ
+    }
+}

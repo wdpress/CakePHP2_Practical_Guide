@@ -1,0 +1,8 @@
+class Counter {
+    private $count = 0;
+
+    function up($value=1) {
+        $this->count += $value;
+        return $this->count;
+    }
+}

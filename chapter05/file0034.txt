@@ -1,0 +1,9 @@
+<?php
+// app/Controller/TopicsController.php
+class TopicsController extends AppController {
+    
+    public function index() {
+        $data = $this->Topic->find('all');
+        debug($data);
+    }
+}

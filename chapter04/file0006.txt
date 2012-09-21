@@ -1,0 +1,11 @@
+<?php
+// app/Controller/PostsController.php
+class PostsController extends AppController {
+
+    // Numberヘルパーを使う
+    public $helpers = array('Number');
+    
+    public function index() {
+        $this->render('index');
+    }
+}

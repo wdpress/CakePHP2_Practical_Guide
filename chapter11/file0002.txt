@@ -1,0 +1,7 @@
+Available Shells:
+
+[CORE] acl, api, bake, command_list, console, i18n, schema, test, testsuite, upgrade
+
+To run an app or core command, type cake shell_name [args]
+To run a plugin command, type cake Plugin.shell_name [args]
+To get help on a specific command, type cake shell_name --help

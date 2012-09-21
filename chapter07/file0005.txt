@@ -1,0 +1,29 @@
+<?php
+// app/Controller/AppController.php
+App::uses('Controller', 'Controller');
+class AppController extends Controller {
+    public $components = array(
+        'Session' => array(),
+        'Auth' => array(
+            // ログイン処理用のアクションの設定
+            'loginAction' => array(
+                'controller' => 'users',
+                'action' => 'login'
+            ),
+            'authenticate' => array(
+                // Formを使った認証を行う設定
+                'Form' => array(
+                    // Userモデルを使って認証を行う
+                    'userModel' => 'User',
+                    // Userデータを取得する際の絞り込み条件
+                    'scope' => array('User.id >' => 0),
+                    // ユーザ名とパスワードして使うカラムを指定
+                    'fields' => array(
+                        'username' => 'username',
+                        'password' => 'password',
+                    )
+                )
+            )
+        )
+    );
+}

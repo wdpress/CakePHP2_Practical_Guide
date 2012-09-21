@@ -1,0 +1,9 @@
+shared
+	tmp
+    	cache
+        	models
+        	persistent
+        	views
+        logs
+        sessions
+        tests

@@ -1,0 +1,8 @@
+<?php
+// app/Model/Hoge.php
+class Hoge extends AppModel {
+
+    // database.php内の$anotherの設定を使う
+    public $useDbConfig = 'another';
+    
+}

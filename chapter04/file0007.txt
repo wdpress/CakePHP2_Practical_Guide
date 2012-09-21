@@ -1,0 +1,7 @@
+<!-- app/View/Posts/index.ctp -->
+<?php
+echo $this->Html->link(
+'CakePHP Official',
+'http://www.cakephp.org'
+);
+?>

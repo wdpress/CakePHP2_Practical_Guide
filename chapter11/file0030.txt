@@ -1,0 +1,13 @@
+    'help' => 'カテゴリー削除',
+    'parser' => array(
+        'description' => array(
+            '指定されたカテゴリーIDのレコードを削除します。'),
+        'arguments' => array(
+            'id' => array('help' => 'カテゴリーID', 'required' => true)),
+        'options' => array(	// ここから追加
+            'force' => array(
+                'short' => 'f',
+                'help' => '確認メッセージなしで削除する',
+                'boolean' => true))
+    )
+));

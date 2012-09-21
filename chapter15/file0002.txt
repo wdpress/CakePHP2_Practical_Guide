@@ -1,0 +1,1 @@
+Bench: [0.008156] app/Controller/Component/BenchmarkComponent.php:20

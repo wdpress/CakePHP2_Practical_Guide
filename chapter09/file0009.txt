@@ -1,0 +1,8 @@
+$email->to('suzuki@example.com');
+
+// 追加部分
+// APPとはappディレクトリの絶対パスを表すCakePHPの定数
+$email->attachments(APP . '/webroot/img/cake.icon.png');
+
+$email->subject('これはテストメールです');
+$messages = $email->send('これはテストメールの本文です。');

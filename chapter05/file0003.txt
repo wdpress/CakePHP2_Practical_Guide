@@ -1,0 +1,14 @@
+<?php
+// app/Model/Hoge.php
+/* 下記のようなテーブルに対して処理を行う
+CREATE TABLE `bbs_thread` (
+`tid` INT NOT NULL AUTO_INCREMENT ,
+`subject` TINYTEXT NOT NULL ,
+`body` TEXT NOT NULL ,
+PRIMARY KEY (  `tid` )
+) ENGINE = MYISAM ;
+*/
+class Hoge extends AppModel {
+    public $useTable = 'bbs_thread';
+    public $primaryKey = 'tid';
+}

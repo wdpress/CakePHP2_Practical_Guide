@@ -1,0 +1,14 @@
+<?php
+// app/Controller/HelpController.php
+class HelpController extends AppController {
+
+    // Cookieコンポーネントを追加する
+    public $components = array('Cookie');
+    
+    public function index() {
+        // CookieコンポーネントとSessionコンポーネントのメソッドを使う
+        $this->Cookie->write('name','this is test');
+        $this->Session->setFlash('This is test message');
+        $this->redirect('Posts/index');
+    }
+}

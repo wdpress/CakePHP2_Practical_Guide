@@ -1,0 +1,6 @@
+SELECT `Topic`.`id`, `Topic`.`title`, `Topic`.`body`, 
+`Topic`.`category_id`, `Topic`.`created`, `Topic`.`modified`, 
+`Comment`.`id`, `Comment`.`topic_id`, `Comment`.`title`, 
+`Comment`.`comment`, `Comment`.`created`, `Comment`.`modified` 
+FROM `topics` AS `Topic` LEFT JOIN　`comments` AS `Comment` 
+ON (`Comment`.`topic_id` = `Topic`.`id`) WHERE 1 = 1

@@ -1,0 +1,8 @@
+
+// CakePHP 1.3
+$this->output = mb_convert_encoding($this->output,'Shift_JIS','UTF-8');
+
+// CakePHP 2.0
+$this->response->body(
+    mb_convert_encoding($this->response->body(),'Shift_JIS','UTF-8')
+);

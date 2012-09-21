@@ -1,0 +1,15 @@
+<?php
+// app/Controller/FriendsController.php
+class FriendsController extends AppController {
+    public function index() {
+        $data = array(
+            'Friend' => array(
+                'first_name' => 'Duke',
+                'last_name' =>'滝下'
+            )
+        );
+        $this->Friend->save($data);
+        $this->Friend->create(); // これがないと2回目はUPDATEになる
+        $this->Friend->save($data);
+    }
+}

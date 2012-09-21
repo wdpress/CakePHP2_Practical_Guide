@@ -1,0 +1,9 @@
+public $uses = array('Category');
+
+public function index() {
+    $this->out("id\tname");
+    foreach ($this->Category->find('all') as $category) {
+        $this->out($category['Category']['id']
+            ."\t".$category['Category']['name']);
+    }
+}

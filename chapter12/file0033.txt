@@ -1,0 +1,4 @@
+class CookieComponentTest extends CakeTestCase {
+    public $Controller;
+    // 省略
+}

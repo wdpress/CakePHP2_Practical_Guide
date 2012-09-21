@@ -1,0 +1,14 @@
+<?php
+// app/Controller/HelpController.php
+class HelpController extends AppController {
+    
+    public function find() {
+        // フォームの内容を取得してモデルの処理に使う
+        $posts = array();
+        if ($this->request->is('post')) {
+            $keyword = $this->request->data['keyword'];
+            $posts = $this->Post->findByKeyword($keyword);
+        }
+        $this->set('posts',$posts);
+    }
+}

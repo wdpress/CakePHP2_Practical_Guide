@@ -1,0 +1,12 @@
+<?php
+// モデルからデータを取得
+$users = $this->User->find("all");
+
+// 通常の方法でメールアドレスを抽出した場合
+$mail = array();
+foreach ($users as $row) {
+    $mail[] = $row['User']['mail'];
+}
+
+// Set::extractを使ってメールアドレスのみを抽出した場合
+$results = Set::extract('/User/mail', $users);

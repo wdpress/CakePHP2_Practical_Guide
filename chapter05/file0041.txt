@@ -1,0 +1,22 @@
+<?php
+class Recipe extends AppModel {
+    public $name = 'Recipe';
+    public $hasAndBelongsToMany = array(
+        'Ingredient' =>
+            array(
+            'className'              => 'Ingredient',
+            'joinTable'              => 'ingredients_recipes',
+            'foreignKey'             => 'recipe_id',
+            'associationForeignKey'  => 'ingredient_id',
+            'unique'                 => true,
+            'conditions'             => '',
+            'fields'                 => '',
+            'order'                  => '',
+            'limit'                  => '',
+            'offset'                 => '',
+            'finderQuery'            => '',  // 検索時のクエリ
+            'deleteQuery'            => '',  // 削除時のクエリ
+            'insertQuery'            => ''   // 追加時のクエリ
+        )
+    );
+}

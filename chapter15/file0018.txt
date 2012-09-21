@@ -1,0 +1,3 @@
+    'index' => '+1 hour',
+    'view' => '+10 minute',
+);

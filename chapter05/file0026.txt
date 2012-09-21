@@ -1,0 +1,23 @@
+<?php
+// app/Controller/FriendsController.php
+class FriendsController extends AppController {
+    public function index() {
+        $data = array(
+            array(
+                'first_name' => 'Eric',
+                'last_name' =>'遠藤'
+            ),
+            array(
+                'first_name' => 'Elena',
+                'last_name' =>'遠藤'
+            )
+        );
+        $options = array(
+            'validate' => true, // バリデーションを実行
+            'atomic' => true, // 同一トランザクションで処理
+            'fieldList' => array('first_name','last_name'),
+            'deep' => true // 関連データも保存
+        );
+        $this->Friend->saveMany($data,$options);
+    }
+}

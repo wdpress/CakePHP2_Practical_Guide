@@ -1,0 +1,14 @@
+<?php
+// app/Controller/FriendsController.php
+class FriendsController extends AppController {
+    public function index() {
+        $options = array(
+            'conditions' => array(
+                'Friend.id' => 10
+            )
+        );
+        $data = $this->Friend->find('first',$options);
+        debug($data['Friend']['first_name']); // Friendのfirst_name
+        debug($data['Friend']['last_name']); // Friendのlast_name
+    }
+}

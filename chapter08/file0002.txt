@@ -1,0 +1,3 @@
+<?php
+// app/Vendor/Geshi.phpの中にGeshiクラスがある場合
+App::uses('Geshi', 'Vendor');

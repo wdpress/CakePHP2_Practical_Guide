@@ -1,0 +1,9 @@
+<?php
+// app/Controller/PostsController.php
+class PostsController extends AppController {
+
+    public function behavior_test() {
+        // Postモデルの$actsAsにDemoビヘイビアが設定済み
+        $this->Post->sayHello();
+    }
+}

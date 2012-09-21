@@ -1,0 +1,6 @@
+
+●リスト13.8::h()関数でXSSを防ぐ
+
+<!-- app/View/Xss/index.ctp -->
+<h1>XSS</h1>
+<?php echo h($name); ?>

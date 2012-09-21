@@ -1,0 +1,34 @@
+<!-- app/View/Tasks/create.ctp -->
+<form action="<?php 
+    echo $this->Html->url('/Tasks/create');
+?>" method="POST">
+タスク名<input type="text" name="name" size="40">
+<input type="submit" value="タスクを作成">
+</form>
+
+●リスト4.25::データの新規作成処理を追加したコントローラー（抜粋）
+<?php
+// app/Controller/TasksController.php
+class TasksController extends AppController {
+// 略
+    public function create() {
+        
+        // POSTされた場合だけ処理を行う
+        if ($this->request->is('post')) {
+            $data = array(
+                'name' => $this->request->data['name']
+            );
+            // データを登録
+            $id = $this->Task->save($data);
+            $msg = sprintf(
+                'タスク %s を登録しました。',
+                $this->Task->id
+            );
+            
+            // メッセージを表示してリダイレクト
+            $this->flash($msg,'/Tasks/index');
+            return;            
+        }
+        $this->render('create');
+    }
+}

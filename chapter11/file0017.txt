@@ -1,0 +1,43 @@
+(注:サブコマンドを指定しない実行例)
+$ Console/cake category
+〜省略
+カテゴリ管理プログラム	←（1）
+
+Usage:
+cake category [subcommand] [-h] [-v] [-q]
+
+Subcommands:
+
+index   カテゴリの一覧表示	←（2）
+add     カテゴリ追加
+delete  カテゴリ削除
+
+To see help on a subcommand use `cake category [subcommand] --help`
+〜省略
+
+(注:サブコマンドを指定した実行例)
+$ Console/cake category index --help
+〜省略
+登録されているカテゴリをすべて一覧表示します。	←（3）
+
+Usage:
+cake category index [-h] [-v] [-q]
+〜省略
+
+(注:サブコマンドを指定した実行例)
+$ Console/cake category delete --help
+〜省略
+指定されたカテゴリIDのレコードを削除します。	←（3）
+
+Usage:
+cake category delete [-h] [-v] [-q] <id>
+
+Options:
+
+--help, -h     Display this help.
+--verbose, -v  Enable verbose output.
+--quiet, -q    Enable quiet output.
+
+Arguments:
+
+id  カテゴリID	←（4）

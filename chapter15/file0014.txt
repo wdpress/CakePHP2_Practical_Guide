@@ -1,0 +1,4 @@
+Bench: [0.000000] app/Controller/Component/BenchmarkComponent.php:13
+Bench: [0.000203] app/Controller/SlowController.php:9  ←（1）
+Bench: [0.002254] app/Controller/SlowController.php:13 ←（2）
+Bench: [0.008340] app/Controller/Component/BenchmarkComponent.php:20

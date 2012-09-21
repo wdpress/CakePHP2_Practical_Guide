@@ -1,0 +1,4 @@
+SELECT `Friend`.`id`, `Friend`.`first_name`, `Friend`.`last_name` 
+FROM `friends` AS `Friend` WHERE 
+((`Friend`.`first_name` = 'Andy') OR 
+(`Friend`.`id` IN (2000, 2, 30)))

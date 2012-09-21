@@ -1,0 +1,14 @@
+<?php
+// app/Model/Topic.php
+class Topic extends AppModel {
+    
+    public $belongsTo = array(
+        'Category' => array(
+            'className' => 'Category',
+            'foreignKey' => 'category_id',
+            'conditions' => array('Category.id <' => 1000),
+            'order' => array('Category.name ASC'),
+        )
+    );
+    
+}

@@ -1,0 +1,15 @@
+<?php
+// app/Controller/PostsController.php
+/**
+次のようなテーブルがあればモデルクラスも実行時に生成される
+CREATE TABLE  `posts` (
+`id` INT NOT NULL AUTO_INCREMENT ,
+`name` TINYTEXT NOT NULL ,
+`body` TEXT NOT NULL ,
+PRIMARY KEY (  `id` )
+) ENGINE = MYISAM ;
+**/
+class PostsController extends AppController {
+    
+    public $scaffold;
+}

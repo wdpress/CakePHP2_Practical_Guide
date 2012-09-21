@@ -1,0 +1,10 @@
+/**
+ * A random string used in security hashing methods.
+ */
+Configure::write('Security.salt','(注:任意の40文字程度の文字列)');
+ 
+/**
+ * A random numeric string (digits only) 
+ * used to encrypt/decrypt strings.
+ */
+Configure::write('Security.cipherSeed', '(注:任意の30桁程度の数値)');

@@ -1,0 +1,10 @@
+<Directory "/path_to_webroot">
+    Options FollowSymLinks Includes
+    AllowOverride All
+
+    Order Allow,Deny
+    Allow from all
+
+    # 本番環境用の設定
+    SetEnv WEB_APP_ENV "production"
+</Directory>

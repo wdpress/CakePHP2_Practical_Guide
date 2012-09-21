@@ -1,0 +1,19 @@
+
+<?php
+// app/Controller/SecurityActionMethodController.php
+App::uses('AppController', 'Controller');
+
+class SecurityActionMethodController extends AppController {
+    public $uses = array();
+
+    public function index() {
+        $this->something();
+    }
+
+    /**
+     * 外から呼ばれたくない
+     */
+    public function something() {
+        // 何かの処理
+    }
+}

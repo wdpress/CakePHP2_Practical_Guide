@@ -1,0 +1,9 @@
+<?php
+// app/Controller/ExampleController.php
+class ExampleController extends AppController {
+    public $theme = 'Sample';
+    
+    public function index() {
+        $this->render('index');
+    }
+}

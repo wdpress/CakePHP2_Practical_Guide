@@ -1,0 +1,7 @@
+
+
+●図16.5::TwitterKitの設置
+$ cd app/Plugin
+$ git clone http://github.com/elstc/twitter_kit.git TwitterKit
+$ cd TwitterKit
+$ git checkout -b 2.0 origin/2.0

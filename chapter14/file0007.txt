@@ -1,0 +1,39 @@
+<?php
+// app/Config/database.php
+class DATABASE_CONFIG {
+    public $default = null;
+    
+    public $development = array(
+        'datasource' => 'Database/Mysql',
+        'persistent' => false,
+        'host' => 'localhost',
+        'login' => 'root',
+        'password' => '',
+        'database' => 'development_db',
+        'prefix' => '',
+        'encoding' => 'utf8',
+    );
+
+    public $production = array(
+        'datasource' => 'Database/Mysql',
+        'persistent' => false,
+        'host' => 'db.example.com',
+        'login' => 'mysql_user_name',
+        'password' => 'mysql_password',
+        'database' => 'production_db',
+        'prefix' => '',
+        'encoding' => 'utf8',
+    );
+    
+    public function __construct() {
+        $env = env('WEB_APP_ENV');
+        switch ($env) {
+        case 'production':
+            $this->default = $this->production;
+            break;
+        default:
+            $this->default = $this->development;
+            break;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+<?php
+// app/Controller/ProductSearchController.php
+class ProductSearchController extends AppController {
+    
+    public function index() {
+        // app/View/ProductSearch/detail.ctpを読み込んで表示する
+        $this->render('detail');
+    }
+}

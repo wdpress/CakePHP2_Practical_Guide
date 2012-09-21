@@ -1,0 +1,7 @@
+〜 省略
+Available Shells:
+
+[CORE] acl, api, bake, command_list  ....〜 省略
+
+[app] category (注:←追加)
+〜 省略

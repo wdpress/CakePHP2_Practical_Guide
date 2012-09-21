@@ -1,0 +1,2 @@
+<?php
+mail('suzuki@example.jp', 'test mail subject', 'test mail body');

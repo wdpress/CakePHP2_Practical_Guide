@@ -1,0 +1,7 @@
+<?php
+// app/Controller/AppController.php
+class AppController extends Controller {
+    public $myfield = 'hoge';
+    protected function myfunc() {
+    }
+}

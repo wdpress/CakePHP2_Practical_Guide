@@ -1,0 +1,15 @@
+// app/Controller/HelpController.php
+class HelpController extends AppController {
+
+    public function index() {
+        $this->ext = 'html';
+        $this->render('/HelpCenter/toppage');
+    }
+    
+}
+
+●リスト6.2::ビューファイルの中でのエスケープ
+<!-- app/View/HelpCenter/toppage.html -->
+入力したキーワード：<?php echo h($this->request->data['keyword']); ?>
+<h2><?php echo h($title)?></h2>
+<p><?php echo h($text_from_db)?></p>

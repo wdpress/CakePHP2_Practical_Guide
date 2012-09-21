@@ -1,0 +1,8 @@
+<?php
+// app/Controller/FriendsController.php
+class FriendsController extends AppController {
+    public function index() {
+        $this->Friend->id = 10;
+        $this->Friend->saveField('first_name', "Single");
+    }
+}

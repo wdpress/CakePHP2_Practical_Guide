@@ -1,0 +1,10 @@
+
+// app/Controller/SecurityDataController.php
+public function index() {
+    if (!empty($this->request->data)) {
+        $data = array(
+            'name' => Set::extract($this->request->data, 'User.name'),// （1）
+        );
+        $this->User->save($data); // （2）
+    }
+}

@@ -1,0 +1,12 @@
+<?php
+// app/Controller/TopicsController.php
+class TopicsController extends AppController {
+    
+    public function index() {
+        $options = array(
+            'recursive' => -1
+        );
+        $data = $this->Topic->find('all',$options);
+        debug($data);
+    }
+}

@@ -1,0 +1,22 @@
+// lib/Cake/Test/Case/View/Helper/TextHelperTest.php
+App::uses('View', 'View');	// （1）
+App::uses('TextHelper', 'View/Helper');	// （1）
+// 省略
+class TextHelperTest extends CakeTestCase {
+    // 省略
+    public function setUp() {
+        parent::setUp();
+        $this->View = new View(null);	// （2）
+        $this->Text = new TextHelper($this->View);	// （2）
+    }
+    public function tearDown() {
+        unset($this->View);
+        parent::tearDown();
+    }
+    // 省略
+    public function testAutoLinkEmailInvalid() {	// （3）
+        $result = $this->Text->autoLinkEmails('this is a myaddress@gmx-de test');
+        $expected = 'this is a myaddress@gmx-de test';
+        $this->assertEquals($expected, $result);
+    }
+}

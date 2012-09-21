@@ -1,0 +1,11 @@
+<?php
+// app/Controller/FriendsController.php
+class FriendsController extends AppController {
+    public function index() {
+        $options = array(
+            'limit' => 3
+        );
+        $data = $this->Friend->find('list',$options);
+        debug($data);
+    }
+}

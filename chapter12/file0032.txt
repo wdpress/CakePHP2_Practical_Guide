@@ -1,0 +1,4 @@
+class CookieComponentTestController extends Controller {
+    public $components = array('Cookie');
+    // 省略
+}

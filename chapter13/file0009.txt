@@ -1,0 +1,20 @@
+
+<?php
+// app/Controller/SqlController.php
+App::uses('AppController', 'Controller');
+
+class SqlController extends AppController {
+    public $uses = array('User');
+
+    public function index() {
+        if ($this->request->is('post')) {
+            $conditions = array(                                  // （1）
+                'email' => $this->request->data['User']['email'], // （1）
+                'pass' => $this->request->data['User']['pass'],   // （1）
+            );                                                    // （1）
+            $user = $this->User->find('first', compact('conditions'));
+
+            $this->set('user', $user);
+        }
+    }
+}

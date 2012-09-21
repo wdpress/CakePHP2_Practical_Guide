@@ -1,0 +1,18 @@
+
+class PostsController extends AppController {
+    public $uses = array('Post', 'Foo');
+    public function index() {
+        $this->Post->find();
+    }
+}
+
+●リスト17.3::CakePHP 2のPostsコントローラーの例
+
+App::uses('AppController', 'Controller');
+class PostsController extends AppController {
+    public $uses = array('Post', 'Foo');
+    public function index() {
+        // この時点でPostモデルのインスタンスが生成される
+        $this->Post->find();
+    }
+}

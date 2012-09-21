@@ -1,0 +1,21 @@
+<?php
+// app/Controller/HelpController.php
+class HelpController extends AppController {
+    
+    public function index() {
+        // app/View/Help/show.ctpを読み込んで表示する
+        $color = 'pink';
+        $this->set('color',$color);    // （1）
+        $data = array(
+            'city' => 'Shibuya',
+            'train' => array(    // （2）
+                'JR',
+                'Tokyu',
+                'Tokyo Metro',
+                'Keio'
+            ) 
+        );
+        $this->set($data);
+        $this->render('show');
+    }
+}

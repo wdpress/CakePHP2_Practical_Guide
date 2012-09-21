@@ -1,0 +1,16 @@
+<?php
+// app/Controller/SampleController.php
+App::uses('CakeEmail', 'Network/Email');
+
+class SamplesController extends AppController {
+
+	public function index() {
+
+		// 引数にはEmailConfigの変数名を指定
+		$email = new CakeEmail('default');
+		$email->to('suzuki@example.com');
+		$messages = $email->send('これはテストメールの本文です。');
+
+		$this->set('messages', $messages);
+	}
+}

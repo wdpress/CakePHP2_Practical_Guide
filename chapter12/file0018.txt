@@ -1,0 +1,7 @@
+// app/Test/Case/Model/TopicTest.php
+public function testタイトルは必須入力である() {
+    $this->Topic->create(array('Topic'=>array('title'=>'')));	// （1）
+    $this->assertFalse($this->Topic->validates());		// （2）
+    $this->assertArrayHasKey('title', 
+                $this->Topic->validationErrors); 			// （3）
+}

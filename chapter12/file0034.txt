@@ -1,0 +1,11 @@
+public function setUp() {
+    $_COOKIE = array();
+    $this->Controller = new CookieComponentTestController(
+        new CakeRequest(), new CakeResponse());	// （1）
+    $this->Controller->constructClasses();	// （2）
+    $this->Cookie = $this->Controller->Cookie;	// （3）
+
+    // 省略
+
+    $this->Cookie->startup($this->Controller);	// （4）
+}

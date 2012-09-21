@@ -1,0 +1,7 @@
+
+<!-- app/View/xss/form.ctp -->
+<h1>XSS Form</h1>
+<form action="" method="post">
+<input type="text" name="name" value="<?php echo $this->Form->value('name'); ?>" />
+<input type="submit" />
+</form>

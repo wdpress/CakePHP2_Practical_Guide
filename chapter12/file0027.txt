@@ -1,0 +1,9 @@
+// app/Test/Case/Controller/TopicsControllerTest.php
+/**
+ * @expectedException NotFoundException
+ * @expectedExceptionMessage Invalid topic
+ */
+public function test存在しないトピックを表示するとNotFoundになる()
+{
+    $this->testAction('/topics/view/999');
+}

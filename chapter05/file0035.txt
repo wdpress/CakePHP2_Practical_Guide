@@ -1,0 +1,6 @@
+SELECT `Topic`.`id`, `Topic`.`title`, `Topic`.`body`, 
+`Topic`.`category_id`, `Topic`.`created`, `Topic`.`modified`, 
+`Category`.`id`, `Category`.`name`, `Category`.`created`, 
+`Category`.`modified` FROM `topics` AS `Topic` 
+LEFT JOIN `categories` AS `Category` 
+ON (`Topic`.`category_id` = `Category`.`id`) WHERE 1 = 1

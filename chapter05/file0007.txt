@@ -1,0 +1,8 @@
+<?php
+// app/Controller/FriendsController.php
+class FriendsController extends AppController {
+    public function index() {
+        $data = $this->Friend->find('all');
+        debug($data);
+    }
+}

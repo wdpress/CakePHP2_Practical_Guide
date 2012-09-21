@@ -1,0 +1,24 @@
+<?php
+// app/Controller/TasksController.php
+class TasksController extends AppController {
+    
+    // 動作確認のためにscaffoldを使う
+    public $scaffold;
+    
+    public function index() {
+    
+        // データをモデルから取得してビューへ渡す
+        $options = array(
+            'conditions' => array(
+                'Task.status' => 0
+            )
+        );
+        $tasks_data = $this->Task->find('all',$options);
+        $this->set('tasks_data',$tasks_data);
+        
+        // app/View/Tasks/index.ctpを表示
+        $this->render('index');
+    }
+    // 略
+
+}

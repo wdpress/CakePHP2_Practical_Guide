@@ -1,0 +1,6 @@
+<?php
+// モデルからデータを取得
+$users = $this->User->find("all");
+
+// Userのidをキーに、nameを値にした連想配列を生成
+$mail_map = Set::combine($users, '{n}.User.id', '{n}.User.name');

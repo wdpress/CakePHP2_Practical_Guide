@@ -1,0 +1,7 @@
+
+<?php
+// app/Controller/SecurityDataController.php
+App::uses('AppController', 'Controller');
+
+class SecurityDataController extends AppController {
+  public $components = array('Security'); // 追加

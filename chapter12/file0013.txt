@@ -1,0 +1,18 @@
+// app/Test/Case/Model/TopicTest.php
+App::uses('Topic', 'Model');	// （1）
+class TopicTest extends CakeTestCase {		// （2）
+    public $fixtures = array(  // （3）
+        'app.topic',
+        'app.category',
+        'app.comment'
+    );
+
+    public function setUp() {	// （4）
+        parent::setUp();
+        $this->Topic = ClassRegistry::init('Topic');	// （5）
+    }
+    public function tearDown() {	// （6）
+        unset($this->Topic);
+        parent::tearDown();
+    }
+}

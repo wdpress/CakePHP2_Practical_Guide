@@ -1,0 +1,12 @@
+public function delete() {
+    $category = $this->Category->findById($this->args[0]);
+    $this->out($category['Category']['id']
+        ."\t".$category['Category']['name']);
+     if(strtolower($this->in('本当に削除してもよろしいですか？', 
+                             array('y', 'n'), 'n')) == 'n') {
+         $this->out('終了します');
+         return;
+    }
+    $this->Category->delete($this->args[0]);
+    $this->out('削除しました');
+}

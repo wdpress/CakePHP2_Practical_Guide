@@ -1,0 +1,10 @@
+$this->out($category['Category']['id']
+    ."\t".$category['Category']['name']);
+if(!$this->params['force']) {  // ここから修正
+    if(strtolower($this->in('本当に削除してもよろしいですか？', 
+                            array('y', 'n'), 'n')) == 'n') {
+        $this->out('終了します');
+        return;
+    }
+}  // ここまで修正
+$this->Category->delete($this->args[0]);

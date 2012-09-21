@@ -1,0 +1,27 @@
+public function getOptionParser() {
+    $parser = parent::getOptionParser();
+    return $parser->description(
+            'カテゴリ管理プログラム'  // （1）
+    )->addSubcommand('index', array(	
+        'help' => 'カテゴリの一覧表示',	// （2）
+        'parser' => array('description' => array( // （3）
+            '登録されているカテゴリをすべて一覧表示します。'))
+    ))->addSubcommand('add', array(
+        'help' => 'カテゴリ追加',		// （2）
+        'parser' => array('description' => array(
+            '指定されたカテゴリ名のレコードを追加します。'),
+            'arguments' => array(
+                    'name' => array(
+                          'help' => 'カテゴリ名',
+                          'required' => true)))
+    ))->addSubcommand('delete', array(
+        'help' => 'カテゴリ削除',		// （2）
+        'parser' => array(	
+            'description' => array(		// （3）
+                '指定されたカテゴリIDのレコードを削除します。'),
+            'arguments' => array(		// （4）
+                    'id' => array(
+                            'help' => 'カテゴリID', 
+                            'required' => true))
+    )));
+}

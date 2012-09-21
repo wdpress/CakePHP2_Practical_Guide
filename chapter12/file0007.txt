@@ -1,0 +1,13 @@
+$ Console/cake test core Basics
+
+---------------------------------------------------------------
+CakePHP Test Shell
+---------------------------------------------------------------
+PHPUnit 3.6.10 by Sebastian Bergmann.
+
+...................S.
+
+Time: 2 seconds, Memory: 5.50Mb
+
+OK, but incomplete or skipped tests!
+Tests: 21, Assertions: 152, Skipped: 1.

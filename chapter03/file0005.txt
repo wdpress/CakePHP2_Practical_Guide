@@ -1,0 +1,3 @@
+//Configure::write('App.baseUrl', env('SCRIPT_NAME'));
+↓
+Configure::write('App.baseUrl', env('SCRIPT_NAME'));

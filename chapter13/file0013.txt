@@ -1,0 +1,1 @@
+params[ a@example.com, pass01&#039; OR 1=1-- ] (注:実際は1行)

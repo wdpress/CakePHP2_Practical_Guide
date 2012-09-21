@@ -1,0 +1,2 @@
+SELECT `Friend`.`id`, `Friend`.`first_name`, `Friend`.`last_name`
+FROM `friends` AS `Friend` WHERE 1 = 1

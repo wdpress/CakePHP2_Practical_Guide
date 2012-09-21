@@ -1,0 +1,8 @@
+CREATE TABLE  `notes` (
+`id` INT NOT NULL AUTO_INCREMENT ,
+`task_id` INT NOT NULL ,
+`body` TINYTEXT NOT NULL ,
+`created` DATETIME NOT NULL ,
+`modified` DATETIME NOT NULL ,
+PRIMARY KEY (  `id` )
+) ENGINE = MYISAM ;

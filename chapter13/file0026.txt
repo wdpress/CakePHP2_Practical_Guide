@@ -1,0 +1,9 @@
+
+<?php
+// app/Controller/CsrfController.php
+App::uses('AppController', 'Controller');
+
+class CsrfController extends AppController {
+    public $uses = array();
+    public $components = array('Security'); // （1）
+    public $helpers = array('Form');

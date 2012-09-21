@@ -1,0 +1,23 @@
+
+<?php
+// app/Model/Slow.php
+App::uses('Cache', 'Cache'); // （1）
+
+class Slow extends AppModel {
+    public $useTable = false;
+
+    public function doSomething() {
+        $ret = Cache::read('Slow_something'); // （2）
+        if ($ret !== false) {
+            return $ret;
+        }
+
+        // 何かの処理
+        sleep(5);
+
+        $ret = array('time' => date('Y:m:d H:i:s'));
+        Cache::write('Slow_something', $ret); // （3）
+
+        return $ret;
+    }
+}

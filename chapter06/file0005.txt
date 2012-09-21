@@ -1,0 +1,16 @@
+<?php
+// app/Controller/ExampleController.php
+class ExampleController extends AppController {
+    public function download () {
+        $this->viewClass = 'Media';
+        // Download app/outside_webroot_dir/example.zip
+        $params = array(
+            'id'        => 'example.zip',
+            'name'      => 'example',    
+            'download'  => true,
+            'extension' => 'zip',
+            'path'      => APP . 'outside_webroot_dir' . DS
+        );
+        $this->set($params);
+    }
+}

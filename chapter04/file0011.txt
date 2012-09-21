@@ -1,0 +1,10 @@
+<?php
+// app/View/Help/show.ctp
+echo $color; // 'pink'と表示
+?><br/>
+<?php
+echo $city; // 'Shibuya'と表示
+?><br/>
+<?php
+echo $train[2]; // 'Tokyo Metro'と表示
+?>

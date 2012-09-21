@@ -1,0 +1,2 @@
+SELECT COUNT(*) AS `count` FROM `friends` AS `Friend` 
+WHERE `Friend`.`first_name` LIKE '%Andy%'

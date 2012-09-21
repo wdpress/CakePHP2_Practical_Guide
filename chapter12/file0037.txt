@@ -1,0 +1,6 @@
+// lib/Cake/View/Helper/JsHelper.php
+class JsHelper extends AppHelper {
+    // 省略
+    public $helpers = array('Html', 'Form');
+    // 省略
+}

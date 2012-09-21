@@ -1,0 +1,5 @@
+<?php
+// app/Network/CakeRequest.php
+class CakeRequest {
+    // CakeRequestの代わりに行う処理を実装する
+}

@@ -1,0 +1,12 @@
+
+CREATE TABLE `users` (
+`id` int(11) NOT NULL,
+`name` tinytext COLLATE utf8_unicode_ci NOT NULL,
+`email` tinytext COLLATE utf8_unicode_ci NOT NULL,
+`pass` tinytext COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+INSERT INTO `users` 
+(`id`, `name`, `email`, `pass`) VALUES
+(1, 'Mike', 'a@example', 'password'),
+(2, 'Jun', 'b@example', 'password');

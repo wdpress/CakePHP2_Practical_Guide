@@ -1,0 +1,8 @@
+    $parser = parent::getOptionParser();
+    return $parser->description(
+        '指定されたカテゴリー名のレコードを追加します。'
+    )->addArgument('name', array(
+        'help' => 'カテゴリー名',
+        'required' => true
+    ));
+}

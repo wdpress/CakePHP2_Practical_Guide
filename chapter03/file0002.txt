@@ -1,0 +1,4 @@
+http://CakePHPを設置したURL/
+
+(注:mod_rewriteが有効でない場合)
+http://CakePHPを設置したURL/index.php

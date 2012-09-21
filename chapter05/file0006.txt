@@ -1,0 +1,7 @@
+<?php
+// app/Model/Friend.php
+class Friend extends AppModel {
+
+    public $displayField = 'last_name';
+    
+}

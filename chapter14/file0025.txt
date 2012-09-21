@@ -1,0 +1,8 @@
+$ cap (注:タスク名) deploy
+  * executing `deploy'
+  * executing `deploy:update'
+ ** transaction: start
+  * executing `deploy:update_code'
+...（省略）
+    command finished in 78ms
+ ** transaction: commit

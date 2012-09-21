@@ -1,0 +1,15 @@
+<?php
+// app/Controller/FriendsController.php
+class FriendsController extends AppController {
+    public function index() {
+        $options = array(
+            'conditions' => array(
+                'OR' => array(
+                    'Friend.first_name' => 'Andy',
+                    'Friend.id' => array(2000,2,30) // INを使う
+                )
+            )
+        );
+        $data = $this->Friend->find('all',$options);
+    }
+}

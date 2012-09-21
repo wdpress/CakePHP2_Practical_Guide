@@ -1,0 +1,12 @@
+<?php
+// app/Controller/PostsController.php
+class PostsController extends AppController {
+
+    public function index() {
+        $this->viewClass = 'Json';
+        $this->set('posts',$this->Post->find('all'));
+        $this->set('some_var','This is my var');
+        $this->set('_serialize', array('posts','some_var'));
+    }
+
+}

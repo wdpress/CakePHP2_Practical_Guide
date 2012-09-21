@@ -1,0 +1,3 @@
+PATH=/usr/local/bin/php5.3:$PATH
+cd /CakePHPを設置したディレクトリ/app
+Console/cake test app AllTests --stderr --log-junit junit.xml

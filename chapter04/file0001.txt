@@ -1,0 +1,15 @@
+<?php
+// app/Controller/ProductSearchController.php
+class ProductSearchController extends AppController {
+
+    public $uses = array('Product');
+    
+    public function yourAction() {
+        // Productモデルを利用（モデルの呼び出し）
+        $products = $this->Product->find('all');
+        $this->set('products',$products);
+        // app/View/ProductSearch/index.ctp
+        // を表示（ビューの呼び出し）
+        $this->render('index');
+    }
+}

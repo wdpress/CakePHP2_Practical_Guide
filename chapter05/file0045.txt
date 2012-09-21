@@ -1,0 +1,33 @@
+<?php
+// app/Controller/TasksController.php
+class TasksController extends AppController {
+
+    /* indexアクションとdoneアクションは以前と同じなので省略 */
+    
+    public function create() {
+
+        // POSTされた場合だけ処理を行う
+        if ($this->request->is('post')) {
+            $data = array(
+                'name' => $this->request->data['name'],
+                // bodyを追加
+                'body' => $this->request->data['body'],
+            );
+            // データを登録
+            $id = $this->Task->save($data);
+            if ($id === false) { // ifブロックを追加
+                $this->render('create');
+                return;
+            }
+            $msg = sprintf(
+                'タスク %s を登録しました。',
+                $this->Task->id
+            );
+            
+            // メッセージを表示してリダイレクト
+            $this->flash($msg,'/Tasks/index');
+            return;         
+        }
+        $this->render('create');
+    }
+}

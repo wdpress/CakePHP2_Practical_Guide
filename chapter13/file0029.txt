@@ -1,0 +1,9 @@
+
+// app/Config/bootstrap.php
+Configure::write('Session', array(
+    'defaults' => 'php',
+    'autoRegenerate' => true, // （1）
+));
+
+App::uses('CakeSession', 'Model/Datasource');
+CakeSession::$requestCountdown = 1; // （2）

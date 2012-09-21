@@ -1,0 +1,14 @@
+require 'Counter.php';
+class CounterTest extends PHPUnit_Framework_TestCase
+{
+    private $counter;
+    public function setUp() {
+        $this->counter = new Counter();
+    }
+    public function testカウントアップ() {
+        $this->assertEquals(1, $this->counter->up());
+    }
+    public function test指定した数カウントアップ() {
+        $this->assertEquals(2, $this->counter->up(2));
+    }
+}

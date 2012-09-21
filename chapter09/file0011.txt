@@ -1,0 +1,3 @@
+$email->attachments(array(
+	$ja_file => APP . '/webroot/img/cake.icon.png'
+));

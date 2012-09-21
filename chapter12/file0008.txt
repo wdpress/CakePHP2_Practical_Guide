@@ -1,0 +1,6 @@
+[xdebug]
+zend_extension="/php5.3/lib/php/extensions/xdebug.so"
+
+// PHP 5.2系のphp.ini
+[xdebug]
+zend_extension_ts="/php5.2/lib/php/extensions/xdebug.so"

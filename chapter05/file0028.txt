@@ -1,0 +1,2 @@
+UPDATE `friends` AS `Friend` SET `Friend`.`first_name` = 'Happy' 
+WHERE `Friend`.`id` > 100

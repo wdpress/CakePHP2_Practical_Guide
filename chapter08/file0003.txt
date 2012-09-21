@@ -1,0 +1,11 @@
+<?php
+// app/Vendor/geshi.phpを読み込む
+App::import('Vendor', 'geshi');
+
+// app/Vendor/flickr/flickr.phpを読み込む
+App::import('Vendor', 'flickr/flickr');
+
+// app/Vendor/services/well.named.phpを読み込む
+App::import('Vendor', 'WellNamed', array(
+    'file' => 'services' . DS . 'well.named.php'
+));

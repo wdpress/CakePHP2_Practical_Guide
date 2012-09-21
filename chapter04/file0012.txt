@@ -1,0 +1,20 @@
+<?php
+// app/Controller/HelpController.php
+class HelpController extends AppController {
+    
+    public function index() {
+        // 絶対URLを使ったリダイレクト
+        $this->redirect('http://cakephp.org/');
+    }
+    
+    public function login() {
+        $this->Session->setFlash('ログインしました');
+        // コントローラーとアクションを指定したリダイレクト
+        // http://localhost/ 以下に設置している場合は
+        // http://localhost/products/indexにリダイレクト
+        $this->redirect(array(
+          'controller' => 'products',
+          'action' => 'index'
+        ));
+    }
+}

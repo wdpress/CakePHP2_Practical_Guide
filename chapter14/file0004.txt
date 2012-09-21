@@ -1,0 +1,9 @@
+<?php
+$env = env('WEB_APP_ENV');
+if ($env === 'production') {
+    // 本番環境の設定を行う
+} else if ($env === 'staging') {
+    // ステージング環境用の設定を行う
+} else {
+    // 開発環境用の設定を行う
+}

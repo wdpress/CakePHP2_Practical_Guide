@@ -1,0 +1,22 @@
+// lib/Cake/Test/Case/View/Helper/JsHelperTest.php
+App::uses('HtmlHelper', 'View/Helper');
+App::uses('JsHelper', 'View/Helper');
+// 省略
+App::uses('FormHelper', 'View/Helper');	// 利用するヘルパーも宣言
+// 省略
+class JsHelperTest extends CakeTestCase {
+    // 省略
+    public function setUp() {
+        // 省略
+        $this->Js = new JsHelper($this->View, 'Option');	// （1）
+        $request = new CakeRequest(null, false);
+        $this->Js->request = $request;
+        $this->Js->Html = new HtmlHelper($this->View);	// （2）
+        $this->Js->Html->request = $request;			// （3）
+        $this->Js->Form = new FormHelper($this->View);	// （4）
+        $this->Js->Form->request = $request;			// （3）
+        $this->Js->Form->Html = $this->Js->Html;			// （3）
+        // 省略
+    }
+    // 省略
+}

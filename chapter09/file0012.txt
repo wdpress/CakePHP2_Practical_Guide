@@ -1,0 +1,16 @@
+$email->to('suzuki@example.com');
+
+// 追加部分：複数ファイルを添付する
+$email->attachments(array(
+	APP . '/webroot/img/cake.icon.png',
+	APP . '/webroot/img/cake.power.gif',
+));
+
+// 追加部分：複数ファイルを名前を変えて添付する
+$email->attachments(array(
+	'mark_of_cake.png'    => APP . '/webroot/img/cake.icon.png',
+	'powered_by_cake.gif' => APP . '/webroot/img/cake.power.gif',
+));
+
+$email->subject('これはテストメールです');
+$messages = $email->send('これはテストメールの本文です。');

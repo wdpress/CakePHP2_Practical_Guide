@@ -1,0 +1,9 @@
+public $uses = array('Sample.Book');
+// モデル間の関連を指定する場合
+public $belongsTo = array('Sample.Order');
+// コンポーネントを使う場合
+public $components = array('Sample.Preview');
+// ヘルパーを使う場合
+public $helpers = array('Sample.Mobile');
+// ビューからプラグイン内のエレメントを利用する場合
+$this->element('cart', array(), array('plugin'=>'Sample'));

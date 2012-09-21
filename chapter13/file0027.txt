@@ -1,0 +1,13 @@
+
+<?php
+// app/Controller/CsrfController.php
+App::uses('AppController', 'Controller');
+
+class CsrfController extends AppController {
+    public $uses = array();
+    public $components = array('Security');
+    public $helpers = array('Form');
+
+    public function beforeFilter() {
+        $this->Security->validatePost = false; // （1）
+    }

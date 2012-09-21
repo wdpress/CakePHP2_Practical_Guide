@@ -1,0 +1,2 @@
+// 次のコマンドを実行するか、.bash_profileなどに記述しておく
+export WEB_APP_ENV='production'

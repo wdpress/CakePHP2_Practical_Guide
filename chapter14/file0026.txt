@@ -1,0 +1,11 @@
+releases
+	20120327060141
+		app
+			tmp (注:shared/tmpのシンボリックリンク)
+			（省略）
+			webroot
+		index.php
+		lib
+		plugins
+		vendors
+shared

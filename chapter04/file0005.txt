@@ -1,0 +1,12 @@
+<?php
+// app/Controller/RankingController.php
+class RankingController extends AppController {
+
+    // PostモデルとUserモデルを使う
+    public $uses = array('Post','User');
+    
+    public function index() {
+        // Postモデルのメソッドを呼ぶ
+        $posts = $this->Post->find('all');
+    }
+}

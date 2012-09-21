@@ -1,0 +1,44 @@
+// app/Test/Fixture/TopicFixture.php
+public $records = array(
+    array(
+        'id' => 1, 'category_id' => 1,
+        'title' => '新しいパソコン',
+        'created' => '2012-02-02 05:15:13'),
+    array(
+        'id' => 2, 'category_id' => 1,
+        'title' => '新しい携帯電話',
+        'created' => '2012-02-03 05:15:13'),
+    array(
+        'id' => 3, 'category_id' => 1,
+        'title' => '格好良いスマートフォン',
+        'created' => '2012-02-01 05:15:13'),
+    array(
+        'id' => 4, 'category_id' => 1,
+        'title' => 'はじめてのPHP',
+        'created' => '2012-02-04 05:15:13'),
+    array(
+        'id' => 5, 'category_id' => 1,
+        'title' => 'はじめてのWindows',
+        'created' => '2012-02-05 05:15:13'),
+    array(
+        'id' => 6, 'category_id' => 1,
+        'title' => 'CG入門',
+        'created' => '2012-02-06 05:15:13'),
+    array(
+        'id' => 7, 'category_id' => 2,
+        'title' => '好きなお寿司は？',
+        'created' => '2012-02-04 15:15:15')
+);
+
+●リスト12.8::Topicモデルのテストに追加するテストケース
+// app/Test/Case/Model/TopicTest.php
+public function testカテゴリ1の最新5件が取得できること() {
+    $latests = $this->Topic->getLatest();
+    $this->assertCount(5, $latests);
+    $this->assertEquals('CG入門', $latests[0]['Topic']['title']);
+    $this->assertEquals('はじめてのWindows', 
+                        $latests[1]['Topic']['title']);
+    $this->assertEquals('はじめてのPHP', $latests[2]['Topic']['title']);
+    $this->assertEquals('新しい携帯電話', $latests[3]['Topic']['title']);
+    $this->assertEquals('新しいパソコン', $latests[4]['Topic']['title']);
+}

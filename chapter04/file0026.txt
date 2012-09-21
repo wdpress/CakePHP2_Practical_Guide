@@ -1,0 +1,26 @@
+<?php
+//app/Controller/TasksController.php
+class TasksController extends AppController {
+
+    public function create() {
+        
+        //POSTされた場合だけ処理を行う
+        if ($this->request->is('post')) {
+            $data = array(
+                'name' => $this->request->data['name']
+            );
+            //データを登録
+            $id = $this->Task->save($data);
+            $msg = sprintf(
+                'タスク %s を登録しました。',
+                $this->Task->id
+            );
+            
+            //メッセージを表示してリダイレクト
+            $this->Session->setFlash($msg);
+            $this->redirect('/Tasks/index');
+            return;            
+        }
+        $this->render('create');
+    }
+}

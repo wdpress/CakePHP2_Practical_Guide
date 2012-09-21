@@ -1,0 +1,6 @@
+
+<!-- app/View/Xss/form.ctp -->
+<h1>Xss Form</h1>
+<?php echo $this->Form->create(false); ?>
+<?php echo $this->Form->input('name'); ?>
+<?php echo $this->Form->end('submit'); ?>

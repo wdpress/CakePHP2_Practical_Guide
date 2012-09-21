@@ -1,0 +1,5 @@
+$ capify .
+[add] writing './Capfile'
+[add] making directory './config'
+[add] writing './config/deploy.rb'
+[done] capified!

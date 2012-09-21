@@ -1,0 +1,8 @@
+<?php
+// app/Model/Task.php
+class Task extends AppModel {
+    
+    public $hasMany = array('Note');
+    /* $validateは以前と同じなので省略 */
+    
+}

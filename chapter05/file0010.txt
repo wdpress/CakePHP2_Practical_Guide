@@ -1,0 +1,6 @@
+SELECT `Friend`.`id`, `Friend`.`first_name`, `Friend`.`last_name` 
+FROM `friends` AS `Friend` 
+WHERE `Friend`.`first_name` = 'Andy' 
+AND `Friend`.`id` < 2000 
+ORDER BY `Friend`.`first_name` ASC 
+LIMIT 10

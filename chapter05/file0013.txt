@@ -1,0 +1,13 @@
+<?php
+// app/Controller/FriendsController.php
+class FriendsController extends AppController {
+    public function index() {
+        $options = array(
+            'conditions' => array(
+                'Friend.first_name LIKE' => '%Andy%'
+            )
+        );
+        $data = $this->Friend->find('count',$options);
+        debug($data); // 件数が数値で取得される
+    }
+}

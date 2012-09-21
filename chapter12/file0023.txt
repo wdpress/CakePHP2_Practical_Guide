@@ -1,0 +1,13 @@
+<?php
+// app/Test/Case/Controller/TopicsControllerTest.php
+App::uses('TopicsController', 'Controller');
+
+class TopicsControllerTest extends ControllerTestCase {
+
+    public $fixtures = array(
+        'app.topic',
+        'app.category',
+        'app.comment'
+    );
+    // 省略
+}

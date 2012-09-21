@@ -1,0 +1,9 @@
+<?php
+// app/Controller/FriendsController.php
+class FriendsController extends AppController {
+    public function index() {
+        $this->Friend->delete(10); // id = 10のレコードを削除
+        $this->Friend->delete(11,true); // 関連データも削除
+
+    }
+}

@@ -1,0 +1,3 @@
+ALTER TABLE  `tasks` ADD  
+`status` INT NOT NULL DEFAULT  '0' AFTER `body` ,
+ADD  `due_date` DATE NULL DEFAULT NULL AFTER  `status`;

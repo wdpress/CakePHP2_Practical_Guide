@@ -1,0 +1,3 @@
+PATH=/usr/local/bin/php5.3:$PATH
+cd /cake2book/app
+Console/cake testsuite app AllTests --stderr --log-junit junit.xml

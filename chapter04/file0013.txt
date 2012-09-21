@@ -1,0 +1,30 @@
+<?php
+// app/Controller/HelpController.php
+class HelpController extends AppController {
+    
+    public function index() {
+        // 絶対URLを使ったリダイレクト
+        $this->flash(
+            'CakePHPのサイトへ移動します',
+            'http://cakephp.org/'
+        );
+    }
+    
+    public function login() {
+        // コントローラーとアクションを指定したリダイレクト
+        $this->flash(
+            '商品一覧へ10秒後に移動します。',
+            array(
+                'controller' => 'products',
+                'action' => 'index'
+            ),
+            10
+        );
+    }
+    
+    public function logout() {
+        // setFlashでメッセージをセットしてからリダイレクト
+        $this->Session->setFlash('ログアウトしました。');
+        $this->redirect('/');
+    }
+}

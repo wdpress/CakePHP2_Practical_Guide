@@ -1,0 +1,32 @@
+<?php
+// app/Controllers/AppController.php
+class AppController extends Controller {
+	public $components = array(
+		'Session',
+		'Auth' => array(
+			// （1）認証の設定
+			'authenticate' => array(
+				'all' => array(
+					'fields' => array(
+						'username' => 'username',
+						'password' => 'password',
+					),
+				),
+				'TwitterKit.TwitterOauth',
+			),
+			// （2）ログインURL
+			'loginAction' => array(
+				'plugin' => 'twitter_kit',
+				'controller' => 'users',
+				'action' => 'login',
+			),
+			// （3）ログイン完了後に遷移するURL
+			'loginRedirect' => array(
+				'plugin' => 'twitter_kit',
+				'controller' => 'users',
+				'action' => 'login',
+			),
+		),
+		'TwitterKit.Twitter',
+	);
+}

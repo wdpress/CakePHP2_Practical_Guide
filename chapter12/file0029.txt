@@ -1,0 +1,6 @@
+// app/Test/Case/Controller/TopicsControllerTest.php
+public function test削除が成功したらindexにリダイレクトする()
+{
+    $this->testAction('/topics/delete/1', array('method' => 'post'));
+    $this->assertRegExp('/topics$/', $this->headers['Location']);
+}

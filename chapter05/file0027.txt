@@ -1,0 +1,13 @@
+<?php
+// app/Controller/FriendsController.php
+class FriendsController extends AppController {
+    public function index() {
+        $data = array(
+            'Friend.first_name' => "'Happy'" // クオートに注意
+        );
+        $conditions = array(
+            'Friend.id >' => 100
+        );
+        $this->Friend->updateAll($data,$conditions);
+    }
+}

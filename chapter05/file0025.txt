@@ -1,0 +1,1 @@
+DELETE `Friend` FROM `friends` AS `Friend` WHERE `Friend`.`id` = 10

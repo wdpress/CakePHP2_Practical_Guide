@@ -1,0 +1,3 @@
+// app/Test/Case/Model/TopicTest.php
+$this->assertEquals('格好良いスマートフォン', 
+                    $latests[3]['Topic']['title']);

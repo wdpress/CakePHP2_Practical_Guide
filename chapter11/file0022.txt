@@ -1,0 +1,16 @@
+〜省略
+指定されたカテゴリIDのレコードを削除します。
+
+Usage:
+cake category delete [-h] [-v] [-q] [-f] <id>
+
+Options:
+
+--help, -h     Display this help.
+--verbose, -v  Enable verbose output.
+--quiet, -q    Enable quiet output.
+--force, -f    確認メッセージなしで削除する	← 追加されたオプション
+
+Arguments:
+
+id  カテゴリID

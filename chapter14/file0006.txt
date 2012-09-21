@@ -1,0 +1,18 @@
+<?php
+// app/Model/AppModel.php
+class AppModel extends Model {
+    public function __construct(
+                        $id = false, 
+                        $table = null, 
+                        $ds = null) {
+            
+        parent::__construct($id, $table, $ds);
+        
+        $env = env('WEB_APP_ENV');
+        if ($env === 'production') {
+            $this->useDbConfig = 'production';
+        } else {
+            $this->useDbConfig = 'development';
+        }
+    }
+}

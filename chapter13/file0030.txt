@@ -1,0 +1,5 @@
+$this->Session->renew();
+
+// CakeSessionクラスの場合
+App::uses('CakeSession', 'Model/Datasource');
+CakeSession::renew();

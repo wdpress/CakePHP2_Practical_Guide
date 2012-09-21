@@ -1,0 +1,9 @@
+<?php
+// app/Controller/FriendsController.php
+class FriendsController extends AppController {
+    public function index() {
+        $sql = 'SELECT * FROM friends as Friend WHERE id IN (1,2)';
+        $data = $this->Friend->query($sql);
+        debug($data);
+    }
+}

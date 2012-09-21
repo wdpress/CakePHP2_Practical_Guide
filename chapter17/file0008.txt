@@ -1,0 +1,16 @@
+$ lib/Cake/Console/cake upgrade all --dry-run --app (注:appフォルダのパス)
+
+Welcome to CakePHP v2.2.0 Console
+---------------------------------------------------------------
+App : app
+Path: /home/xxx/app/
+---------------------------------------------------------------
+Dry-run mode enabled!
+Running tests      （1）
+Running locations  （2）
+Running helpers    （3）
+ Done updating /home/xxx/app/View/Posts/view.ctp
+ Done updating /home/xxx/app/View/Posts/edit.ctp
+ Done updating /home/xxx/app/View/Posts/add.ctp
+ Done updating /home/xxx/app/View/Posts/index.ctp
+ 略

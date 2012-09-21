@@ -1,0 +1,58 @@
+<!-- app/View/Tasks/index.ctp -->
+<?php echo $this->Html->link('新規タスク','/Tasks/create');?>
+<h3><?php echo count($tasks_data);?>件のタスクが未完了です</h3>
+<?php foreach ($tasks_data as $row): ?>
+<?php echo $this->element('task',array('task' => $row))?>
+<?php endforeach; ?>
+
+●リスト6.13::タスクを1件表示するエレメント例
+<!-- app/View/Elements/task.ctp -->
+<?php echo $this->Html->css('task'); // CSSを読み込み ?>
+<div class="roundBox">
+<h3><?php echo h($task['Task']['id']);?>
+:
+<?php echo h($task['Task']['name']);?></h3>
+作成日 <?php echo h($task['Task']['created']);?>
+<p class="comment">
+<ul>
+<?php foreach ($task['Note'] as $note): ?>
+<li><?php echo h($note['body']);?></li>
+<?php endforeach; ?>
+<li><?php echo $this->Html->link(
+    'コメントを追加',
+    '/Notes/create'
+);?></li>
+</ul></p>
+
+<?php echo $this->Html->link(
+    '編集',
+    '/Tasks/edit/'.$task['Task']['id'],
+    array('class' => 'button left')
+);?>
+
+<?php echo $this->Html->link(
+    'このタスクを完了する',
+    '/Tasks/done/'.$task['Task']['id'],
+    array('class' => 'button right')
+);?>
+</div>
+
+●リスト6.14::タスクを1件表示するエレメント例
+// app/webroot/css/task.css
+.roundBox {
+    background: #FFDACC;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    font-weight: normal;
+    padding: 10px;
+    margin: 10px 0;
+}
+.button {
+    background-color: #7A90C0;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    padding: 5px 25px;
+    line-height: 2em;
+}

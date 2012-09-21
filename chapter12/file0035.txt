@@ -1,0 +1,3 @@
+public function testCookieName() {
+	$this->assertEquals('CakeTestCookie', $this->Cookie->name);
+}

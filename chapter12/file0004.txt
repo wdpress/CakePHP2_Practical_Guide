@@ -1,0 +1,10 @@
+public $test = array(
+    'datasource' => 'Database/Mysql',
+    'persistent' => false,
+    'host' => 'localhost',
+    'login' => 'root',
+    'password' => 'root',
+    'database' => 'test_cake2book',
+    'prefix' => '',
+    'encoding' => 'utf8'
+);

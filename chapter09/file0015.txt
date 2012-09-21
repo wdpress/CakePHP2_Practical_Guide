@@ -1,0 +1,27 @@
+<?php
+// app/Controller/SamplesController.php
+App::uses('CakeEmail', 'Network/Email');
+
+class SamplesController extends AppController {
+
+	public function index() {
+
+		$email = new CakeEmail(array(
+								'charset' => 'ISO-2022-JP'
+							   )); // （1）
+		$email->transport('Debug'); // （2）Debugトランスポート
+
+		$email->from('suzuki@example.jp','すずき');
+		$email->to('suzuki@example.com');
+		$email->subject('テストメールの件名です');
+	
+		$email->template('thank_you', 'sample_layout'); // （3）
+		$email->emailFormat('html'); // （4）
+	
+		$email->viewVars(array('user' => 'すずき')); // （5）
+	
+		$messages = $email->send();
+	
+		$this->set('messages', $messages);
+	}
+}
