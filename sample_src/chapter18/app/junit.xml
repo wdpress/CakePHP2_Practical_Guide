@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="アプリケーション全テスト" tests="17" assertions="21" failures="0" errors="0" time="0.381176">
+    <testsuite name="TopicTest" file="/Users/kishidakenichirou/develop/cake2book/sample2.2/app/Test/Case/Model/TopicTest.php" tests="2" assertions="8" failures="0" errors="0" time="0.072768">
+      <testcase name="testタイトルは必須入力である" class="TopicTest" file="/Users/kishidakenichirou/develop/cake2book/sample2.2/app/Test/Case/Model/TopicTest.php" line="42" assertions="2" time="0.035846"/>
+      <testcase name="testカテゴリ1の最新5件が取得できること" class="TopicTest" file="/Users/kishidakenichirou/develop/cake2book/sample2.2/app/Test/Case/Model/TopicTest.php" line="48" assertions="6" time="0.036922"/>
+    </testsuite>
+    <testsuite name="CategoriesControllerTest" file="/Users/kishidakenichirou/develop/cake2book/sample2.2/app/Test/Case/Controller/CategoriesControllerTest.php" tests="5" assertions="0" failures="0" errors="0" time="0.027896">
+      <testcase name="testIndex" class="CategoriesControllerTest" file="/Users/kishidakenichirou/develop/cake2book/sample2.2/app/Test/Case/Controller/CategoriesControllerTest.php" line="25" assertions="0" time="0.005385"/>
+      <testcase name="testView" class="CategoriesControllerTest" file="/Users/kishidakenichirou/develop/cake2book/sample2.2/app/Test/Case/Controller/CategoriesControllerTest.php" line="33" assertions="0" time="0.005594"/>
+      <testcase name="testAdd" class="CategoriesControllerTest" file="/Users/kishidakenichirou/develop/cake2book/sample2.2/app/Test/Case/Controller/CategoriesControllerTest.php" line="41" assertions="0" time="0.005675"/>
+      <testcase name="testEdit" class="CategoriesControllerTest" file="/Users/kishidakenichirou/develop/cake2book/sample2.2/app/Test/Case/Controller/CategoriesControllerTest.php" line="49" assertions="0" time="0.005781"/>
+      <testcase name="testDelete" class="CategoriesControllerTest" file="/Users/kishidakenichirou/develop/cake2book/sample2.2/app/Test/Case/Controller/CategoriesControllerTest.php" line="57" assertions="0" time="0.005461"/>
+    </testsuite>
+    <testsuite name="CommentsControllerTest" file="/Users/kishidakenichirou/develop/cake2book/sample2.2/app/Test/Case/Controller/CommentsControllerTest.php" tests="5" assertions="0" failures="0" errors="0" time="0.027810">
+      <testcase name="testIndex" class="CommentsControllerTest" file="/Users/kishidakenichirou/develop/cake2book/sample2.2/app/Test/Case/Controller/CommentsControllerTest.php" line="26" assertions="0" time="0.005434"/>
+      <testcase name="testView" class="CommentsControllerTest" file="/Users/kishidakenichirou/develop/cake2book/sample2.2/app/Test/Case/Controller/CommentsControllerTest.php" line="34" assertions="0" time="0.005515"/>
+      <testcase name="testAdd" class="CommentsControllerTest" file="/Users/kishidakenichirou/develop/cake2book/sample2.2/app/Test/Case/Controller/CommentsControllerTest.php" line="42" assertions="0" time="0.005497"/>
+      <testcase name="testEdit" class="CommentsControllerTest" file="/Users/kishidakenichirou/develop/cake2book/sample2.2/app/Test/Case/Controller/CommentsControllerTest.php" line="50" assertions="0" time="0.005787"/>
+      <testcase name="testDelete" class="CommentsControllerTest" file="/Users/kishidakenichirou/develop/cake2book/sample2.2/app/Test/Case/Controller/CommentsControllerTest.php" line="58" assertions="0" time="0.005577"/>
+    </testsuite>
+    <testsuite name="TopicsControllerTest" file="/Users/kishidakenichirou/develop/cake2book/sample2.2/app/Test/Case/Controller/TopicsControllerTest.php" tests="5" assertions="13" failures="0" errors="0" time="0.252702">
+      <testcase name="testトピックを一覧表示できる" class="TopicsControllerTest" file="/Users/kishidakenichirou/develop/cake2book/sample2.2/app/Test/Case/Controller/TopicsControllerTest.php" line="21" assertions="8" time="0.118075"/>
+      <testcase name="testトピック一覧はtableタグで表示する" class="TopicsControllerTest" file="/Users/kishidakenichirou/develop/cake2book/sample2.2/app/Test/Case/Controller/TopicsControllerTest.php" line="37" assertions="1" time="0.058406"/>
+      <testcase name="test存在しないトピックを表示するとNotFoundになる" class="TopicsControllerTest" file="/Users/kishidakenichirou/develop/cake2book/sample2.2/app/Test/Case/Controller/TopicsControllerTest.php" line="55" assertions="2" time="0.023923"/>
+      <testcase name="test削除が成功したらindexにリダイレクトする" class="TopicsControllerTest" file="/Users/kishidakenichirou/develop/cake2book/sample2.2/app/Test/Case/Controller/TopicsControllerTest.php" line="60" assertions="1" time="0.024482"/>
+      <testcase name="test新しいトピックを追加する" class="TopicsControllerTest" file="/Users/kishidakenichirou/develop/cake2book/sample2.2/app/Test/Case/Controller/TopicsControllerTest.php" line="66" assertions="1" time="0.027816"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

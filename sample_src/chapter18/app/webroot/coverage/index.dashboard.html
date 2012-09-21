@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery.min.js" type="text/javascript"></script>
+    <script src="highcharts.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+          var classCoverageDistribution = new Highcharts.Chart({
+             chart: {
+                renderTo: 'classCoverageDistribution',
+                type: 'column'
+             },
+             title: {text: ''},
+             legend: {enabled: false},
+             credits: {enabled: false},
+             tooltip: {enabled: false},
+             xAxis: {
+                 labels: {style: {fontSize: '8px'}},
+                 categories: [
+                 '0%','0-10%','10-20%','20-30%','30-40%','40-50%','50-60%','60-70%','70-80%','80-90%','90-100%','100%'
+                 ]
+            },
+            yAxis: {
+                title: '',
+                labels: {style: {fontSize: '8px'}},
+            },
+            series: [{
+                data: [34,5,5,4,4,1,0,0,0,0,0,26]
+            }],
+          });
+
+        var classComplexity = new Highcharts.Chart({
+            chart: {
+              renderTo: 'classComplexity',
+              type: 'scatter'
+            },
+            title: {text: ''},
+            legend: {enabled: false},
+            credits: {enabled: false},
+            xAxis: {
+               labels: {enabled: false},
+            },
+            yAxis: {
+              title: '',
+              labels: {enabled: false},
+            },
+            tooltip: {
+                formatter: function() {
+                    return this.point.config[2];
+                }
+            },
+            series: [{
+              data: [[16.5517241379,64,"<a href=\"Cache_Cache.php.html#42\">Cache<\/a>"],[3.7037037037,16,"<a href=\"Cache_CacheEngine.php.html#21\">CacheEngine<\/a>"],[31.1688311688,64,"<a href=\"Cache_Engine_FileEngine.php.html#32\">FileEngine<\/a>"],[0,46,"<a href=\"Console_Command_TestShell.php.html#32\">TestShell<\/a>"],[0,9,"<a href=\"Console_Command_TestsuiteShell.php.html#33\">TestsuiteShell<\/a>"],[0,8,"<a href=\"Console_ConsoleErrorHandler.php.html#28\">ConsoleErrorHandler<\/a>"],[0,2,"<a href=\"Console_ConsoleInput.php.html#24\">ConsoleInput<\/a>"],[0,18,"<a href=\"Console_ConsoleInputArgument.php.html#25\">ConsoleInputArgument<\/a>"],[0,26,"<a href=\"Console_ConsoleInputOption.php.html#26\">ConsoleInputOption<\/a>"],[0,81,"<a href=\"Console_ConsoleOptionParser.php.html#80\">ConsoleOptionParser<\/a>"],[0,27,"<a href=\"Console_ConsoleOutput.php.html#45\">ConsoleOutput<\/a>"],[0,109,"<a href=\"Console_Shell.php.html#31\">Shell<\/a>"],[0,54,"<a href=\"Console_ShellDispatcher.php.html#24\">ShellDispatcher<\/a>"],[0,5,"<a href=\"Console_TaskCollection.php.html#26\">TaskCollection<\/a>"],[34.5505617978,132,"<a href=\"Core_App.php.html#63\">App<\/a>"],[5.79710144928,30,"<a href=\"Core_CakePlugin.php.html#27\">CakePlugin<\/a>"],[14.7826086957,43,"<a href=\"Core_Configure.php.html#33\">Configure<\/a>"],[0,35,"<a href=\"Core_Object.php.html#26\">Object<\/a>"],[0,28,"<a href=\"Error_ErrorHandler.php.html#98\">ErrorHandler<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#29\">HttpException<\/a>"],[0,2,"<a href=\"Error_exceptions.php.html#38\">BadRequestException<\/a>"],[0,2,"<a href=\"Error_exceptions.php.html#60\">UnauthorizedException<\/a>"],[0,2,"<a href=\"Error_exceptions.php.html#82\">ForbiddenException<\/a>"],[0,2,"<a href=\"Error_exceptions.php.html#104\">NotFoundException<\/a>"],[0,2,"<a href=\"Error_exceptions.php.html#126\">MethodNotAllowedException<\/a>"],[0,2,"<a href=\"Error_exceptions.php.html#148\">InternalErrorException<\/a>"],[0,3,"<a href=\"Error_exceptions.php.html#171\">CakeException<\/a>"],[0,1,"<a href=\"Error_exceptions.php.html#223\">MissingControllerException<\/a>"],[0,1,"<a href=\"Error_exceptions.php.html#239\">MissingActionException<\/a>"],[0,1,"<a href=\"Error_exceptions.php.html#255\">PrivateActionException<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#270\">MissingComponentException<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#281\">MissingBehaviorException<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#292\">MissingViewException<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#303\">MissingLayoutException<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#314\">MissingHelperException<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#325\">MissingDatabaseException<\/a>"],[0,2,"<a href=\"Error_exceptions.php.html#336\">MissingConnectionException<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#354\">MissingTaskException<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#365\">MissingShellMethodException<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#376\">MissingShellException<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#387\">MissingDatasourceConfigException<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#398\">MissingDatasourceException<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#409\">MissingTableException<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#420\">MissingModelException<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#431\">MissingTestLoaderException<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#442\">MissingPluginException<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#453\">MissingDispatcherFilterException<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#464\">AclException<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#473\">CacheException<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#482\">RouterException<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#491\">CakeLogException<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#500\">CakeSessionException<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#509\">ConfigureException<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#518\">SocketException<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#527\">XmlException<\/a>"],[100,0,"<a href=\"Error_exceptions.php.html#536\">ConsoleException<\/a>"],[0,3,"<a href=\"Error_exceptions.php.html#544\">FatalErrorException<\/a>"],[0,1,"<a href=\"Error_exceptions.php.html#571\">NotImplementedException<\/a>"],[43.6578171091,201,"<a href=\"I18n_I18n.php.html#39\">I18n<\/a>"],[30.6818181818,41,"<a href=\"I18n_L10n.php.html#26\">L10n<\/a>"],[33.6283185841,52,"<a href=\"Log_CakeLog.php.html#75\">CakeLog<\/a>"],[22.2222222222,5,"<a href=\"Log_Engine_BaseLog.php.html#27\">BaseLog<\/a>"],[0,4,"<a href=\"Log_Engine_ConsoleLog.php.html#28\">ConsoleLog<\/a>"],[22.2222222222,9,"<a href=\"Log_Engine_FileLog.php.html#28\">FileLog<\/a>"],[0,6,"<a href=\"Log_LogEngineCollection.php.html#27\">LogEngineCollection<\/a>"],[3.24675324675,130,"<a href=\"Network_CakeRequest.php.html#31\">CakeRequest<\/a>"],[3.42465753425,128,"<a href=\"Network_CakeResponse.php.html#28\">CakeResponse<\/a>"],[0,14,"<a href=\"TestSuite_CakeTestLoader.php.html#29\">CakeTestLoader<\/a>"],[0,13,"<a href=\"TestSuite_CakeTestRunner.php.html#25\">CakeTestRunner<\/a>"],[0,20,"<a href=\"TestSuite_CakeTestSuiteCommand.php.html#34\">CakeTestSuiteCommand<\/a>"],[0,28,"<a href=\"TestSuite_CakeTestSuiteDispatcher.php.html#30\">CakeTestSuiteDispatcher<\/a>"],[0,44,"<a href=\"TestSuite_Fixture_CakeFixtureManager.php.html#28\">CakeFixtureManager<\/a>"],[4.51612903226,61,"<a href=\"Utility_ClassRegistry.php.html#32\">ClassRegistry<\/a>"],[25.2054794521,117,"<a href=\"Utility_Debugger.php.html#33\">Debugger<\/a>"],[19.4610778443,137,"<a href=\"Utility_Folder.php.html#22\">Folder<\/a>"],[11.1856823266,188,"<a href=\"Utility_Hash.php.html#29\">Hash<\/a>"],[16.1971830986,50,"<a href=\"Utility_Inflector.php.html#25\">Inflector<\/a>"],[24.7787610619,51,"<a href=\"Utility_ObjectCollection.php.html#27\">ObjectCollection<\/a>"],[0,102,"<a href=\"Utility_String.php.html#26\">String<\/a>"]],
+              marker: {
+                  symbol: 'diamond'
+              }
+            }],
+        });
+    });
+    </script>
+  </head>
+
+  <body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr><td class="title"></td></tr>
+      <tr><td><div align="center"><p><a href="index.html">Back to Code Coverage report</a></p></div></td></tr>
+      <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""></td></tr>
+    </table>
+
+    <br />
+
+    <center>
+      <table width="90%" cellpadding="2" cellspacing="1" border="0">
+        <tr>
+          <td valign="top">
+            <h2>Class Coverage Distribution</h2>
+            <div id="classCoverageDistribution"></div>
+          </td>
+
+          <td valign="top">
+            <h2>Class Complexity</h2>
+            <div id="classComplexity"></div>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <h2>Top Project Risks</h2>
+            <ul>
+              <li><a href="Utility_Hash.php.html#29">Hash</a> (24948)</li>
+              <li><a href="Network_CakeRequest.php.html#31">CakeRequest</a> (15436)</li>
+              <li><a href="Network_CakeResponse.php.html#28">CakeResponse</a> (14885)</li>
+              <li><a href="Console_Shell.php.html#31">Shell</a> (11990)</li>
+              <li><a href="Utility_String.php.html#26">String</a> (10506)</li>
+              <li><a href="Utility_Folder.php.html#22">Folder</a> (9942)</li>
+              <li><a href="I18n_I18n.php.html#39">I18n</a> (7426)</li>
+              <li><a href="Console_ConsoleOptionParser.php.html#80">ConsoleOptionParser</a> (6642)</li>
+              <li><a href="Utility_Debugger.php.html#33">Debugger</a> (5844)</li>
+              <li><a href="Core_App.php.html#63">App</a> (5017)</li>
+
+            </ul>
+          </td>
+
+          <td valign="top">
+            <h2>Least Tested Methods</h2>
+            <ul>
+              <li><a href="Network_CakeResponse.php.html#647">CakeResponse::getMimeType</a> (0%)</li>
+              <li><a href="Network_CakeResponse.php.html#662">CakeResponse::mapType</a> (0%)</li>
+              <li><a href="Network_CakeResponse.php.html#619">CakeResponse::type</a> (0%)</li>
+              <li><a href="Network_CakeResponse.php.html#578">CakeResponse::httpCodes</a> (0%)</li>
+              <li><a href="Network_CakeResponse.php.html#550">CakeResponse::statusCode</a> (0%)</li>
+              <li><a href="Network_CakeResponse.php.html#684">CakeResponse::charset</a> (0%)</li>
+              <li><a href="Network_CakeResponse.php.html#696">CakeResponse::disableCache</a> (0%)</li>
+              <li><a href="Network_CakeResponse.php.html#790">CakeResponse::maxAge</a> (0%)</li>
+              <li><a href="Network_CakeResponse.php.html#812">CakeResponse::mustRevalidate</a> (0%)</li>
+              <li><a href="Network_CakeResponse.php.html#770">CakeResponse::sharedMaxAge</a> (0%)</li>
+
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </center>
+
+    <br />
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""></td></tr>
+      <tr><td class="versionInfo">Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 1.1.2</a> using <a href="http://www.php.net/" target="_top">PHP 5.3.5</a> and PHPUnit 3.6.10 at Sun Jul 15 15:20:11 JST 2012.</td></tr>
+    </table>
+
+    <br/>
+  </body>
+</html>

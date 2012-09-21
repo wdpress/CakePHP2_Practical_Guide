@@ -1,0 +1,17 @@
+.roundBox {
+	background: #FFDACC;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	font-weight: normal;
+	padding: 10px;
+	margin: 10px 0;
+}
+.button {
+	background-color: #7A90C0;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
+	padding: 5px 25px;
+	line-height: 2em;
+}

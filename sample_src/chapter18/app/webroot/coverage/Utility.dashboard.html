@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Utility</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery.min.js" type="text/javascript"></script>
+    <script src="highcharts.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+          var classCoverageDistribution = new Highcharts.Chart({
+             chart: {
+                renderTo: 'classCoverageDistribution',
+                type: 'column'
+             },
+             title: {text: ''},
+             legend: {enabled: false},
+             credits: {enabled: false},
+             tooltip: {enabled: false},
+             xAxis: {
+                 labels: {style: {fontSize: '8px'}},
+                 categories: [
+                 '0%','0-10%','10-20%','20-30%','30-40%','40-50%','50-60%','60-70%','70-80%','80-90%','90-100%','100%'
+                 ]
+            },
+            yAxis: {
+                title: '',
+                labels: {style: {fontSize: '8px'}},
+            },
+            series: [{
+                data: [1,1,3,2,0,0,0,0,0,0,0,0]
+            }],
+          });
+
+        var classComplexity = new Highcharts.Chart({
+            chart: {
+              renderTo: 'classComplexity',
+              type: 'scatter'
+            },
+            title: {text: ''},
+            legend: {enabled: false},
+            credits: {enabled: false},
+            xAxis: {
+               labels: {enabled: false},
+            },
+            yAxis: {
+              title: '',
+              labels: {enabled: false},
+            },
+            tooltip: {
+                formatter: function() {
+                    return this.point.config[2];
+                }
+            },
+            series: [{
+              data: [[4.51612903226,61,"<a href=\"Utility_ClassRegistry.php.html#32\">ClassRegistry<\/a>"],[25.2054794521,117,"<a href=\"Utility_Debugger.php.html#33\">Debugger<\/a>"],[19.4610778443,137,"<a href=\"Utility_Folder.php.html#22\">Folder<\/a>"],[11.1856823266,188,"<a href=\"Utility_Hash.php.html#29\">Hash<\/a>"],[16.1971830986,50,"<a href=\"Utility_Inflector.php.html#25\">Inflector<\/a>"],[24.7787610619,51,"<a href=\"Utility_ObjectCollection.php.html#27\">ObjectCollection<\/a>"],[0,102,"<a href=\"Utility_String.php.html#26\">String<\/a>"]],
+              marker: {
+                  symbol: 'diamond'
+              }
+            }],
+        });
+    });
+    </script>
+  </head>
+
+  <body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr><td class="title">Utility</td></tr>
+      <tr><td><div align="center"><p><a href="Utility.html">Back to Code Coverage report</a></p></div></td></tr>
+      <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""></td></tr>
+    </table>
+
+    <br />
+
+    <center>
+      <table width="90%" cellpadding="2" cellspacing="1" border="0">
+        <tr>
+          <td valign="top">
+            <h2>Class Coverage Distribution</h2>
+            <div id="classCoverageDistribution"></div>
+          </td>
+
+          <td valign="top">
+            <h2>Class Complexity</h2>
+            <div id="classComplexity"></div>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <h2>Top Project Risks</h2>
+            <ul>
+              <li><a href="Utility_Hash.php.html#29">Hash</a> (24948)</li>
+              <li><a href="Utility_String.php.html#26">String</a> (10506)</li>
+              <li><a href="Utility_Folder.php.html#22">Folder</a> (9942)</li>
+              <li><a href="Utility_Debugger.php.html#33">Debugger</a> (5844)</li>
+              <li><a href="Utility_ClassRegistry.php.html#32">ClassRegistry</a> (3300)</li>
+              <li><a href="Utility_Inflector.php.html#25">Inflector</a> (1521)</li>
+              <li><a href="Utility_ObjectCollection.php.html#27">ObjectCollection</a> (1158)</li>
+
+            </ul>
+          </td>
+
+          <td valign="top">
+            <h2>Least Tested Methods</h2>
+            <ul>
+              <li><a href="Utility_Hash.php.html#681">Hash::map</a> (0%)</li>
+              <li><a href="Utility_Hash.php.html#693">Hash::reduce</a> (0%)</li>
+              <li><a href="Utility_Hash.php.html#662">Hash::maxDimensions</a> (0%)</li>
+              <li><a href="Utility_Hash.php.html#637">Hash::dimensions</a> (0%)</li>
+              <li><a href="Utility_Hash.php.html#617">Hash::numeric</a> (0%)</li>
+              <li><a href="Utility_Hash.php.html#706">Hash::apply</a> (0%)</li>
+              <li><a href="Utility_Hash.php.html#733">Hash::sort</a> (0%)</li>
+              <li><a href="Utility_Hash.php.html#918">Hash::nest</a> (0%)</li>
+              <li><a href="Utility_Hash.php.html#874">Hash::normalize</a> (0%)</li>
+              <li><a href="Utility_Hash.php.html#824">Hash::diff</a> (0%)</li>
+
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </center>
+
+    <br />
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""></td></tr>
+      <tr><td class="versionInfo">Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 1.1.2</a> using <a href="http://www.php.net/" target="_top">PHP 5.3.5</a> and PHPUnit 3.6.10 at Sun Jul 15 15:20:11 JST 2012.</td></tr>
+    </table>
+
+    <br/>
+  </body>
+</html>
