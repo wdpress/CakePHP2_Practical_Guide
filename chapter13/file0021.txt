@@ -1,2 +1,0 @@
-**alert(&#039;Hello&#039;);&lt;/script&gt;**" type="text" id="name"/>
-(注:実際は1行)

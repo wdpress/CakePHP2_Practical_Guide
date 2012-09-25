@@ -1,0 +1,5 @@
+// /へのアクセス時はPagesコントローラーへ（CakePHPの初期ページ）
+Router::connect('/', array(
+    'controller' => 'pages', 
+    'action' => 'display', 'home')
+);

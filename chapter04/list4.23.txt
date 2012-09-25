@@ -1,0 +1,16 @@
+<?php
+// app/Controller/TasksController.php
+class TasksController extends AppController {
+// 省略
+    public function done() {
+        
+        // URLの末尾からタスクのIDを取得してデータを更新
+        $id = $this->request->pass[0];
+        $this->Task->id = $id;
+        $this->Task->saveField('status',1);
+        $msg = sprintf('タスク %s を完了しました。',$id);
+        
+        // メッセージを表示してリダイレクト
+        $this->flash($msg,'/Tasks/index');
+    }
+}

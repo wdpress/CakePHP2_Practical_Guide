@@ -1,3 +1,0 @@
-Router::connect('/hoge/:action/*', array('controller' => 'slow'));
-
-clearCache('hoge');

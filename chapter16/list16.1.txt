@@ -1,0 +1,8 @@
+// app/Config/database.php
+public $twitter = array(
+'datasource'            => 'TwitterKit.TwitterSource',
+'oauth_consumer_key'    => 'YOUR_CONSUMER_KEY',
+'oauth_consumer_secret' => 'YOUR_CONSUMER_SECRET',
+// TwitterKitに用意されているコールバックを指定
+'oauth_callback'        => '/twitter_kit/oauth/callback/',
+);

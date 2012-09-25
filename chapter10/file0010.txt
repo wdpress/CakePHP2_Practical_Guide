@@ -1,3 +1,0 @@
-2. /CakePHPを設置したディレクトリ/plugins/
-Choose a plugin path from the paths above.  
-> 

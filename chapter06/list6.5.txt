@@ -1,0 +1,4 @@
+<!-- app/View/Elementes/menu.ctp -->
+現在のページ <?php echo h($current_page); ?><br/>
+あなたのポイント数：<?php echo h($hoge); ?><br/>
+あなたの購入履歴:<?php count($hoge_data); ?>件

@@ -1,2 +1,0 @@
-CakeSession::start(); // （1）
-$this->Session->renew();

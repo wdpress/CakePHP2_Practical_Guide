@@ -1,5 +1,0 @@
-require 'rubygems'
-require 'capcake'
-
-# config/deploy.rbの末尾に次の行を追加
-capcake

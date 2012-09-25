@@ -1,0 +1,4 @@
+SELECT COUNT(*) AS `count` FROM `users` AS `User` WHERE `User`.`id` = 1
+SELECT COUNT(*) AS `count` FROM `users` AS `User` WHERE `User`.`id` = 1
+SELECT COUNT(*) AS `count` FROM `users` AS `User` WHERE `User`.`id` = 1
+UPDATE `users` SET `name` = 'cake', `id` = 1, `email` = 'a@example.com' WHERE `users`.`id` = '1'

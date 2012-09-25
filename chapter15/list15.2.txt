@@ -1,0 +1,12 @@
+<?php
+// app/Controller/SlowController.php
+App::uses('AppController', 'Controller');
+
+class SlowController extends AppController {
+    public $uses = array('Slow');
+
+    public function index() {
+        $data = $this->Slow->doSomething();
+        $this->set('data', $data);
+    }
+}

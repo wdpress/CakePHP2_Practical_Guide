@@ -1,0 +1,11 @@
+
+// app/Controller/SlowController.php
+public function index() {
+    $this->Benchmark->mark(__FILE__, __LINE__); // ←（1）
+
+    $data = $this->Slow->doSomething();
+
+    $this->Benchmark->mark(__FILE__, __LINE__); // ←（2）
+
+    $this->set('data', $data);
+}

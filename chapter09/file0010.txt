@@ -1,2 +1,0 @@
-	'mark_of_cake.png' => APP . '/webroot/img/cake.icon.png'
-));

@@ -1,1 +1,0 @@
-pass='pass01' LIMIT 1;	(注:実際は1行)

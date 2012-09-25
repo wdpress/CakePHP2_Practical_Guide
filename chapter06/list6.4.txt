@@ -1,0 +1,6 @@
+<!-- app/View/HelpCenter/sample.ctp -->
+<?php echo $this->element('menu',array(
+    'current_page' => 'sample', // エレメントで使う変数は引数で渡す
+    'hoge' => 10,
+    'hoge_data' => $hoge_data
+));?>

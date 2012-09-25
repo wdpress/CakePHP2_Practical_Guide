@@ -1,5 +1,0 @@
-●リスト::bakeで生成されたビューファイル
-app/View/Categories/index.ctp
-app/View/Categories/view.ctp
-app/View/Categories/add.ctp
-app/View/Categories/edit.ctp

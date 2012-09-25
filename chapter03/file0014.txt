@@ -1,2 +1,0 @@
-●リスト::bakeで生成されたファイルのひな形の配置先
-app/Console/Templates/your_theme_name/views/

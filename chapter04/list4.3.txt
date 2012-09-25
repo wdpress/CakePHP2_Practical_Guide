@@ -1,0 +1,10 @@
+// /へのアクセス時にProductSearchコントローラーを呼び出す
+Router::connect('/', array(
+    'controller' => 'ProductSearch', 
+    'action' => 'index')
+);
+
+// Search/以下へのアクセス時もProductSearchコントローラーを呼び出す
+Router::connect('/Search/*', array(
+    'controller' => 'ProductSearch')
+);

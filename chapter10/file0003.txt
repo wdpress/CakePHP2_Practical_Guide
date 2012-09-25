@@ -1,4 +1,0 @@
-class AppController extends Controller {
-    public $components = array('DebugKit.Toolbar');
-    // 省略
-}

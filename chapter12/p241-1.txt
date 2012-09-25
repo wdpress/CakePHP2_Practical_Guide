@@ -1,0 +1,5 @@
+// lib/Cake/Test/Case/Controller/Component/CookieComponentTest.phpの60行目付近
+class CookieComponentTest extends CakeTestCase {
+    public $Controller;
+    // 省略
+}

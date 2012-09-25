@@ -1,0 +1,18 @@
+<!-- app/webroot/security_data.php -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+</head>
+<html>
+
+<body>
+  <h1>SecurityData</h1>
+  <form action="/security_data/index" method="post">
+    name:<input type="text" name="data[User][name]" /><br />
+    ID:<input type="text" name="data[User][id]" /><br />  <!--（1）-->
+    email:<input type="text" name="data[User][email]" /><br /> <!--（2）-->
+    <input type="submit" />
+  </form>
+</body>
+</html>

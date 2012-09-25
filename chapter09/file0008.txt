@@ -1,2 +1,0 @@
-$organization = preg_replace("/\n/", '', $organization);
-$email->addHeaders(array('Organization', $organization));

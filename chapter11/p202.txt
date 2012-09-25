@@ -1,0 +1,4 @@
+<?php
+// app/Console/Command/CategoryShell.php
+class CategoryShell extends AppShell {
+}

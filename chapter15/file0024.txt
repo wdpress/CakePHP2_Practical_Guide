@@ -1,6 +1,0 @@
-
-// app/Controller/SlowController.php
-class SlowController extends AppController {
-    public $helpers = array('Cache'); // （1）
-    public $cacheAction = array('index' => '+1 hour');  // （2）
-    // 略

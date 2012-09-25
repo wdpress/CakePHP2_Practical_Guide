@@ -1,3 +1,0 @@
-  * executing `deploy:setup'
-（省略）
-    command finished in 179ms

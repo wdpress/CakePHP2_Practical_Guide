@@ -1,3 +1,0 @@
-$ds = $this->getDataSource();
-$ds->fetchAll("SELECT * FROM users WHERE email=? AND pass=? LIMIT 1",
-                array("a@example.com", "pass01' OR 1=1-- "));

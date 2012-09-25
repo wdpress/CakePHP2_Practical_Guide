@@ -1,0 +1,18 @@
+// app/Console/Command/CategoryShell.php
+))->addSubcommand('delete', array(
+  'help' => 'カテゴリ削除',
+  'parser' => array(
+    'description' => array(
+      '指定されたカテゴリIDのレコードを削除します。'
+    ),
+    'arguments' => array(
+      'id' => array('help' => 'カテゴリID', 'required' => true)
+    ),
+    'options' => array(
+      'force' => array(
+        'short' => 'f',
+        'help' => '確認メッセージなしで削除する',
+        'boolean' => true
+      )
+    )
+)));

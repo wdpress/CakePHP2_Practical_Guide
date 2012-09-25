@@ -1,5 +1,0 @@
-<LocationMatch ^/test.php$>
-   order deny,allow
-   deny from all
-   allow from (注:許可するIPアドレス)
-</LocationMatch>

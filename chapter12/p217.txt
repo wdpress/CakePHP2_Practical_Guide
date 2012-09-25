@@ -1,0 +1,2 @@
+// app/Config/core.phpの35行目付近
+Configure::write('debug', 2);

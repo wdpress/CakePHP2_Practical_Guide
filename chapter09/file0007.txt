@@ -1,2 +1,0 @@
-Organization: gihyo
-Cc: another@example.com

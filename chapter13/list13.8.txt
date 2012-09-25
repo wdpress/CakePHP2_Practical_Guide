@@ -1,0 +1,3 @@
+<!-- app/View/Xss/index.ctp -->
+<h1>XSS</h1>
+<?php echo h($name); ?>

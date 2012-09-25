@@ -1,0 +1,4 @@
+// app/Console/Command/CategoryShell.php
+public function main() {
+    return $this->out($this->OptionParser->help());
+}

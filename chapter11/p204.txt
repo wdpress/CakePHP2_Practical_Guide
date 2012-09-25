@@ -1,0 +1,6 @@
+// app/Console/Command/CategoryShell.php
+public function add() {
+    $this->Category->create();
+    $this->Category->save(array('name'=>$this->args[0]));
+    $this->out('登録しました');
+}

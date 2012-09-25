@@ -1,0 +1,7 @@
+// app/Config/core.phpの35行目付近
+// Configure::write('debug', 2);
+if ( env('WEB_APP_ENV') === 'production' ) {
+    Configure::write('debug', 0);
+} else {
+    Configure::write('debug', 2);
+}

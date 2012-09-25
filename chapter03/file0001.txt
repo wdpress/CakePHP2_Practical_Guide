@@ -1,4 +1,0 @@
-extension=pdo_mysql.so
-
-(注:Windowsの場合のphp.iniの記述)
-extension=php_pdo_mysql.dll

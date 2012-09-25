@@ -1,0 +1,21 @@
+// app/Test/Case/Controller/TopicsControllerTest.php
+public function testトピックを一覧表示できる() {
+    $result = $this->testAction(
+        '/topics/index', array('return' => 'vars'));  // （1）
+    $topics = $result['topics']; // （2）
+    $this->assertCount(7, $topics);
+    $this->assertEquals('新しいパソコン', 
+                        $topics[0]['Topic']['title']);
+    $this->assertEquals('新しい携帯電話', 
+                        $topics[1]['Topic']['title']);
+    $this->assertEquals('格好良いスマートフォン', 
+                        $topics[2]['Topic']['title']);
+    $this->assertEquals('はじめてのPHP', 
+                        $topics[3]['Topic']['title']);
+    $this->assertEquals('はじめてのWindows', 
+                        $topics[4]['Topic']['title']);
+    $this->assertEquals('CG入門', 
+                        $topics[5]['Topic']['title']);
+    $this->assertEquals('好きなお寿司は？', 
+                        $topics[6]['Topic']['title']);
+}

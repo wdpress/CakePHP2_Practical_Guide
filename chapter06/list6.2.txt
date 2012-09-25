@@ -1,0 +1,4 @@
+<!-- app/View/HelpCenter/toppage.html -->
+入力したキーワード：<?php echo h($this->request->data['keyword']); ?>
+<h2><?php echo h($title)?></h2>
+<p><?php echo h($text_from_db)?></p>
