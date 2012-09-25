@@ -1,7 +1,7 @@
 <?php
 // app/Controller/TasksController.php
 class TasksController extends AppController {
-// 略
+// 省略
     public function create() {
         
         // POSTされた場合だけ処理を行う
