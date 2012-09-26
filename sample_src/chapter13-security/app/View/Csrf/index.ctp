@@ -1,0 +1,3 @@
+<h1>CSRF</h1>
+<?php echo $this->Form->create(false); ?>
+<?php echo $this->Form->end('submit'); ?>

