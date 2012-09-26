@@ -22,8 +22,8 @@ http://opensource.org/licenses/mit-license.php
 ## サンプルコードのディレクトリ構成
 次のような構成になっています。
 
-	chapter[章番号]-[章タイトル] … 各章で登場したコード
-	└sample_src …… 各章で作成したアプリケーション
+	chapter[章番号]-[章タイトル] ・・・ 各章で登場したコード
+	└sample_src ・・・ 各章で作成したアプリケーション
 	  └chapter[章番号]-[章タイトル]
 
 ### 各章で登場したコード
