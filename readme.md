@@ -43,3 +43,8 @@ http://opensource.org/licenses/mit-license.php
 本書についてのお問い合わせは、以下のページからお願いします。
 
 https://gihyo.jp/site/inquiry/book?ISBN=978-4-7741-5324-7
+
+## 正誤表
+本書の正誤情報は以下のページで公開しています。
+
+https://github.com/wdpress/CakePHP2_Practical_Guide/wiki/errata
