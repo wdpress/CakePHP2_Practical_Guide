@@ -1,4 +1,4 @@
-// app/webroot/css/task.css
+/* app/webroot/css/task.css */
 .roundBox {
     background: #FFDACC;
     -moz-border-radius: 10px;
